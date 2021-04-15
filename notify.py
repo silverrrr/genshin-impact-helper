@@ -128,7 +128,7 @@ class Notify(object):
 
     def serverChan(self, text, status, desp):
         if Notify.SCKEY != '':
-            url = 'https://sc.ftqq.com/{}.send'.format(Notify.SCKEY)
+            url = 'https://sctapi.ftqq.com/{}.send'.format(Notify.SCKEY)
             data = {'text': '{} {}'.format(text, status), 'desp': desp}
             try:
                 response = self.to_python(requests.post(url, data=data).text)
